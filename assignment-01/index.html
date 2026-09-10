@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Technology</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <section class="header" class="header" id="header">
+        <div class="header-content">
+            <div class="header-title">
+                <h1>WEB TECHNOLOGY</h1>
+            </div>
+            <div class="sub-title">
+                <h2>Contents</h2>
+            </div>
+            <nav>
+                <ol>
+                    <li><a href="#client-server">Client/Server</a></li>
+                    <li>
+                        <a href="#components-of-web-applications">Components of Web Application</a>
+                    </li>
+                    <li><a href="#types-of-webcontent">Types of Web Content</a></li>
+                    <li><a href="#http">HTTP and HTTP Request</a></li>
+                    <li><a href="#dynamic-pages">Dynamic Web Pages</a></li>
+                    <li><a href="#application-servers">Application Servers</a></li>
+                    <li><a href="#web-security">Web Security</a></li>
+                </ol>
+            </nav>
+        </div>
+        <hr />
+    </section>
+
+
+    <section class="client-server" id="client-server">
+        <p class="main-heading">1. Client/Server</p>
+        <p class="sub-heading">Client</p>
+        <p class="content-description">
+            A client is a device or software application that requests services or
+            resources from a server over a network. In web technology, a web browser
+            such as Google Chrome, Mozilla Firefox, or Microsoft Edge acts as a
+            client. The client sends requests to the server and receives the
+            requested data or services in response. The client is usually
+            responsible for providing the user interface through which users
+            interact with a web application.
+            <br />
+            <b>Examples:</b>Web browser, mobile application, desktop application.
+        </p>
+
+        <p class="sub-heading">Server</p>
+        <p class="content-description">
+            A server is a computer or software system that receives requests from
+            clients, processes them, and provides the requested resources or
+            services. A server can store and manage data, execute application logic,
+            and deliver web pages or other resources to clients.In a web
+            application, the server receives HTTP requests from clients, processes
+            those requests, and sends an appropriate response. Servers can also
+            communicate with databases and other services to obtain the required
+            information.
+            <br />
+            <b>Examples:</b>Web server, database server, application server.
+        </p>
+        <hr />
+    </section>
+
+
+    <section class="components-of-web-applications" id="components-of-web-applications">
+        <p class="main-heading">2. Components of Web Application</p>
+
+        <p class="sub-heading">View Layer</p>
+        <p class="content-description">
+            The View Layer is the presentation layer of a web application. It is
+            responsible for displaying information to the user and providing an
+            interface through which users can interact with the application. It
+            contains elements such as web pages, forms, buttons, menus, images,
+            and other user interface components.
+            <br />
+            <b>Examples:</b> HTML, CSS, JavaScript, React, Angular.
+        </p>
+
+        <p class="sub-heading">Business Layer</p>
+        <p class="content-description">
+            The Business Layer contains the main logic and rules of a web
+            application. It processes user requests, performs calculations,
+            applies business rules, and determines how the application should
+            respond to a particular request. It acts as a connection between
+            the View Layer and the Data Access Layer.
+            <br />
+            <b>Examples:</b> User authentication, order processing, price
+            calculation, and data validation.
+        </p>
+
+        <p class="sub-heading">Data Access Layer</p>
+        <p class="content-description">
+            The Data Access Layer is responsible for communicating with databases
+            and other data storage systems. It performs operations such as
+            retrieving, inserting, updating, and deleting data. It provides an
+            interface between the Business Layer and the database, allowing the
+            application to access and manage data efficiently.
+            <br />
+            <b>Examples:</b> SQL queries, Django ORM, database repositories,
+            and database access APIs.
+        </p>
+
+        <hr />
+    </section>
+
+
+    <section class="types-of-webcontent" id="types-of-webcontent">
+        <p class="main-heading">3. Types of Web Content</p>
+
+        <p class="sub-heading">Text</p>
+        <p class="content-description">
+            Text is one of the most common types of content used on websites. It
+            is used to display information, headings, descriptions, articles,
+            instructions, and other written content to users. Text can be
+            formatted using different fonts, sizes, colors, and styles to improve
+            readability.
+            <br />
+            <b>Examples:</b> Articles, news, blogs, headings, and descriptions.
+        </p>
+
+        <p class="sub-heading">Images</p>
+        <p class="content-description">
+            Images are visual elements used to present information or make a web
+            page more attractive and engaging. They can be used to display
+            photographs, illustrations, diagrams, logos, icons, and other visual
+            information. Common image formats used on the web include JPEG, PNG,
+            GIF, and WebP.
+            <br />
+            <b>Examples:</b> Photographs, logos, icons, diagrams, and illustrations.
+        </p>
+
+        <p class="sub-heading">Audio</p>
+        <p class="content-description">
+            Audio content is used to add sound to a web page or web application.
+            It can be used for music, podcasts, voice recordings, notifications,
+            and other sound-based information. HTML provides the audio element
+            that allows audio files to be played directly in a web browser.
+            <br />
+            <b>Examples:</b> Music, podcasts, voice recordings, and sound effects.
+        </p>
+
+        <p class="sub-heading">Video</p>
+        <p class="content-description">
+            Video is a type of multimedia content that combines moving images
+            and sound. It is widely used on websites for education,
+            entertainment, advertisements, demonstrations, and live content.
+            HTML provides the video element for displaying video files in
+            web browsers.
+            <br />
+            <b>Examples:</b> Tutorials, movies, advertisements, lectures, and
+            product demonstrations.
+        </p>
+
+        <p class="sub-heading">Animation</p>
+        <p class="content-description">
+            Animation is used to create the appearance of movement by displaying
+            a series of images or graphical elements. It can make websites more
+            interactive, attractive, and engaging. Animations can be created
+            using CSS, JavaScript, SVG, or other web technologies.
+            <br />
+            <b>Examples:</b> Loading animations, animated advertisements,
+            transitions, and interactive graphics.
+        </p>
+
+        <hr />
+    </section>
+
+
+    <section class="http" id="http">
+        <p class="main-heading">4. HTTP and HTTP Request</p>
+
+        <p class="sub-heading">Definition of HTTP</p>
+        <p class="content-description">
+            HTTP (HyperText Transfer Protocol) is a communication protocol used
+            to transfer data between a client and a server over a network. It is
+            the fundamental protocol used for communication on the World Wide Web.
+            HTTP allows web browsers to request resources such as web pages,
+            images, videos, and other files from web servers. HTTP operates using
+            a request-response model, where the client sends a request and the
+            server sends a response.
+            <br />
+            <b>Examples:</b> HTTP GET, HTTP POST, HTTP PUT, and HTTP DELETE requests.
+        </p>
+
+        <p class="sub-heading">HTTP Request and Response</p>
+        <p class="content-description">
+            An HTTP request is a message sent by a client to a server to request
+            a resource or perform an operation. It contains information such as
+            the HTTP method, requested URL, headers, and sometimes a request body.
+            Common HTTP methods include GET, POST, PUT, and DELETE.
+            <br />
+            An HTTP response is the message sent by the server back to the client
+            after processing the request. It contains a status code, response
+            headers, and sometimes a response body containing the requested data
+            or other information.
+            <br />
+            <b>Examples:</b> 200 OK, 404 Not Found, 500 Internal Server Error.
+        </p>
+
+        <p class="sub-heading">Working of HTTP Communication</p>
+        <p class="content-description">
+            HTTP communication follows a request-response process between a client
+            and a server. First, the user performs an action such as entering a
+            website address or clicking a link. The web browser sends an HTTP
+            request to the appropriate web server. The server receives the request,
+            processes it, and retrieves or generates the required resource. The
+            server then sends an HTTP response back to the client. Finally, the
+            browser processes the response and displays the requested content to
+            the user.
+            <br />
+            <b>Example:</b> When a user enters a website URL in a browser, the
+            browser sends a request to the web server, and the server returns the
+            required web page as a response.
+        </p>
+
+        <hr />
+    </section>
+
+
+    <section class="dynamic-pages" id="dynamic-pages">
+        <p class="main-heading">5. Dynamic Web Pages</p>
+
+        <p class="sub-heading">Definition</p>
+        <p class="content-description">
+            A dynamic web page is a web page whose content can change or be
+            generated based on user input, data, time, or other conditions.
+            Unlike a static web page, where the content remains mostly unchanged,
+            a dynamic web page can generate different content for different users
+            or requests. Dynamic web pages are usually created using server-side
+            or client-side programming technologies.
+            <br />
+            <b>Examples:</b> Online shopping websites, social media websites,
+            banking websites, and web applications.
+        </p>
+
+        <p class="sub-heading">Characteristics</p>
+        <p class="content-description">
+            Dynamic web pages can provide personalized and interactive content
+            to users. Their content can change according to user actions,
+            database information, or other conditions. They can also accept
+            user input, process it, and display the appropriate result.
+            Dynamic web pages commonly communicate with databases and can
+            generate content dynamically when a request is received.
+            <br />
+            <b>Examples:</b> User login pages, personalized dashboards,
+            search results, and shopping carts.
+        </p>
+
+        <p class="sub-heading">Examples</p>
+        <p class="content-description">
+            Many modern websites use dynamic web pages to provide interactive
+            features and regularly changing information. E-commerce websites
+            dynamically display products and prices, social media websites
+            display personalized feeds, and banking websites show account
+            information based on the logged-in user. News websites can also
+            dynamically display the latest articles and updates.
+            <br />
+            <b>Examples:</b> Amazon, YouTube, Facebook, online banking portals,
+            and news websites.
+        </p>
+
+        <hr />
+    </section>
+
+
+    <section class="application-servers" id="application-servers">
+        <p class="main-heading">6. Application Servers</p>
+
+        <p class="sub-heading">Definition</p>
+        <p class="content-description">
+            An application server is a software platform that provides an
+            environment for running and managing web applications and their
+            business logic. It receives requests from clients, processes the
+            application logic, and communicates with databases or other services
+            to generate responses. Application servers help developers build,
+            deploy, and manage web applications efficiently.
+            <br />
+            <b>Examples:</b> Apache Tomcat, JBoss, WildFly, and Oracle WebLogic.
+        </p>
+
+        <p class="sub-heading">Purpose</p>
+        <p class="content-description">
+            The main purpose of an application server is to provide a reliable
+            environment for executing application logic and managing communication
+            between clients, applications, and databases. It simplifies the
+            development and deployment of web applications and provides features
+            required for handling multiple users and requests.
+            <br />
+            <b>Examples:</b> Running business logic, managing database
+            communication, handling user requests, and managing application
+            resources.
+        </p>
+
+        <p class="sub-heading">Major Services</p>
+        <p class="content-description">
+            Application servers provide several services that help web applications
+            operate efficiently and securely. These include security and
+            authentication, transaction management, database connectivity,
+            session management, resource management, and request processing.
+            They can also provide support for application deployment and
+            communication between different components of an application.
+            <br />
+            <b>Examples:</b> Authentication, session management, transaction
+            management, database connectivity, and security services.
+        </p>
+
+        <hr />
+    </section>
+
+
+    <section class="web-security" id="web-security">
+        <p class="main-heading">7. Web Security</p>
+
+        <p class="sub-heading">Definition</p>
+        <p class="content-description">
+            Web security refers to the practices and techniques used to protect
+            websites, web applications, servers, and user data from unauthorized
+            access, attacks, and other security threats. It helps ensure the
+            confidentiality, integrity, and availability of information exchanged
+            through web applications.
+            <br />
+            <b>Examples:</b> HTTPS, authentication, access control, and data
+            encryption.
+        </p>
+
+        <p class="sub-heading">Importance</p>
+        <p class="content-description">
+            Web security is important for protecting sensitive information and
+            preventing unauthorized access to web applications. It helps protect
+            user accounts, passwords, personal information, and other important
+            data from security threats. Good web security also helps maintain
+            user trust and ensures that web applications operate safely and
+            reliably.
+            <br />
+            <b>Examples:</b> Protecting user passwords, preventing unauthorized
+            access, and securing online transactions.
+        </p>
+
+        <p class="sub-heading">Basic Security Measures</p>
+        <p class="content-description">
+            Several basic security measures can be used to protect web
+            applications from common security threats. These include using HTTPS
+            for secure communication, strong authentication and passwords,
+            proper access control, input validation, secure data storage, regular
+            software updates, and protection against common attacks such as
+            SQL injection and cross-site scripting.
+            <br />
+            <b>Examples:</b> Using HTTPS, strong passwords, input validation,
+            access control, encryption, and regular security updates.
+        </p>
+        <hr />
+    </section>
+
+    <section class="footer">
+        <div class="footer">
+            <a href="#header" class="back-to-top">Back to Top</a>
+        </div>
+    </section>
+</body>
+
+</html>
