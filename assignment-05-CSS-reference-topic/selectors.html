@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors Reference</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="reference-page">
+
+    <h1>CSS Selectors Reference</h1>
+
+    <p>
+        CSS selectors are used to select HTML elements that need to be styled.
+    </p>
+
+    <table class="reference-table">
+
+        <tr>
+            <th>Selector</th>
+            <th>Example</th>
+            <th>Description</th>
+        </tr>
+
+        <tr>
+            <td>Element Selector</td>
+            <td>p</td>
+            <td>Selects all paragraph elements.</td>
+        </tr>
+
+        <tr>
+            <td>Class Selector</td>
+            <td>.box</td>
+            <td>Selects elements with class="box".</td>
+        </tr>
+
+        <tr>
+            <td>ID Selector</td>
+            <td>#header</td>
+            <td>Selects the element with id="header".</td>
+        </tr>
+
+        <tr>
+            <td>Universal Selector</td>
+            <td>*</td>
+            <td>Selects all elements.</td>
+        </tr>
+
+        <tr>
+            <td>Group Selector</td>
+            <td>h1, h2, p</td>
+            <td>Selects multiple elements.</td>
+        </tr>
+
+        <tr>
+            <td>Child Selector</td>
+            <td>div &gt; p</td>
+            <td>Selects direct child paragraphs.</td>
+        </tr>
+
+        <tr>
+            <td>Descendant Selector</td>
+            <td>div p</td>
+            <td>Selects paragraphs inside div.</td>
+        </tr>
+
+        <tr>
+            <td>Attribute Selector</td>
+            <td>input[type="text"]</td>
+            <td>Selects text input elements.</td>
+        </tr>
+
+    </table>
+
+    <h2>Example</h2>
+
+    <div class="code-box">
+        p {
+            color: blue;
+        }
+
+        .box {
+            background-color: yellow;
+        }
+
+        #header {
+            font-size: 30px;
+        }
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    background: linear-gradient(135deg, #182848, #4b6cb7);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    border-bottom: 5px solid #111827;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.moving-text {
+    max-width: 900px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 180px);
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 280px;
+    background-color: #111827;
+    color: white;
+    padding: 20px 15px;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #4b6cb7;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #e5e7eb;
+    background-color: #1f2937;
+    padding: 12px 14px;
+    border-radius: 6px;
+    border-left: 4px solid transparent;
+    transition: all 0.25s ease;
+    font-size: 15px;
+}
+
+.sidebar a:hover {
+    background-color: #374151;
+    color: white;
+    border-left-color: #60a5fa;
+    padding-left: 20px;
+}
+
+
+/* =========================================
+   CONTENT AREA
+========================================= */
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #eef2f7;
+}
+
+.content iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 650px;
+    border: none;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background-color: #111827;
+    color: #d1d5db;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   REFERENCE PAGE STYLES
+========================================= */
+
+.reference-page {
+    padding: 30px;
+    background-color: white;
+    min-height: 100%;
+}
+
+.reference-page h1 {
+    color: #1e3a8a;
+    font-size: 32px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #4b6cb7;
+    padding-bottom: 10px;
+}
+
+.reference-page h2 {
+    color: #1f2937;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.reference-page p {
+    margin-bottom: 12px;
+    color: #4b5563;
+}
+
+.reference-page ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.reference-page li {
+    margin-bottom: 6px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.reference-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.reference-table th {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.reference-table td {
+    padding: 11px;
+    border: 1px solid #d1d5db;
+}
+
+.reference-table tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+.reference-table tr:hover {
+    background-color: #e0e7ff;
+}
+
+
+/* =========================================
+   CODE BOX
+========================================= */
+
+.code-box {
+    background-color: #111827;
+    color: #d1d5db;
+    padding: 18px;
+    border-radius: 7px;
+    margin: 15px 0;
+    overflow-x: auto;
+    font-family: Consolas, monospace;
+}
+
+.example-box {
+    background-color: #eff6ff;
+    border-left: 5px solid #2563eb;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+
+/* =========================================
+   COLOR BOXES
+========================================= */
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.color-box {
+    padding: 25px 10px;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.black {
+    background-color: black;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.teal {
+    background-color: teal;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 800px) {
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .content iframe {
+        min-height: 600px;
+    }
+
+    .color-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .sidebar nav {
+        grid-template-columns: 1fr;
+    }
+
+    .reference-page {
+        padding: 20px;
+    }
+
+    .reference-page h1 {
+        font-size: 26px;
+    }
+
+    .color-grid {
+        grid-template-columns: 1fr;
+    }
+}

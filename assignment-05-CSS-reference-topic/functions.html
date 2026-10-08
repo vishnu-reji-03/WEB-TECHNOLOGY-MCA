@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Functions Reference</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="reference-page">
+
+    <h1>CSS Functions Reference</h1>
+
+    <p>
+        CSS functions perform calculations and generate values that can be
+        used by CSS properties.
+    </p>
+
+    <table class="reference-table">
+
+        <tr>
+            <th>Function</th>
+            <th>Example</th>
+            <th>Purpose</th>
+        </tr>
+
+        <tr>
+            <td>rgb()</td>
+            <td>rgb(255, 0, 0)</td>
+            <td>Defines a color using RGB values.</td>
+        </tr>
+
+        <tr>
+            <td>rgba()</td>
+            <td>rgba(255, 0, 0, 0.5)</td>
+            <td>Defines a color with transparency.</td>
+        </tr>
+
+        <tr>
+            <td>calc()</td>
+            <td>calc(100% - 50px)</td>
+            <td>Performs mathematical calculations.</td>
+        </tr>
+
+        <tr>
+            <td>min()</td>
+            <td>min(50%, 400px)</td>
+            <td>Returns the smallest value.</td>
+        </tr>
+
+        <tr>
+            <td>max()</td>
+            <td>max(20px, 5vw)</td>
+            <td>Returns the largest value.</td>
+        </tr>
+
+        <tr>
+            <td>clamp()</td>
+            <td>clamp(16px, 3vw, 30px)</td>
+            <td>Sets a minimum, preferred and maximum value.</td>
+        </tr>
+
+        <tr>
+            <td>var()</td>
+            <td>var(--main-color)</td>
+            <td>Uses a CSS custom property.</td>
+        </tr>
+
+        <tr>
+            <td>url()</td>
+            <td>url("image.jpg")</td>
+            <td>Specifies a resource URL.</td>
+        </tr>
+
+    </table>
+
+    <h2>Example</h2>
+
+    <div class="code-box">
+        .box {
+            width: calc(100% - 40px);
+            color: rgb(0, 100, 255);
+        }
+    </div>
+
+</div>
+
+</body>
+</html>

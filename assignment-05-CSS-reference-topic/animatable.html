@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animatable Reference</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="reference-page">
+
+    <h1>CSS Animatable Reference</h1>
+
+    <p>
+        Animatable CSS properties can change their values gradually during
+        a CSS transition or animation.
+    </p>
+
+    <table class="reference-table">
+
+        <tr>
+            <th>Property</th>
+            <th>Animatable</th>
+            <th>Example</th>
+        </tr>
+
+        <tr>
+            <td>color</td>
+            <td>Yes</td>
+            <td>color: red;</td>
+        </tr>
+
+        <tr>
+            <td>background-color</td>
+            <td>Yes</td>
+            <td>background-color: blue;</td>
+        </tr>
+
+        <tr>
+            <td>width</td>
+            <td>Yes</td>
+            <td>width: 300px;</td>
+        </tr>
+
+        <tr>
+            <td>height</td>
+            <td>Yes</td>
+            <td>height: 300px;</td>
+        </tr>
+
+        <tr>
+            <td>opacity</td>
+            <td>Yes</td>
+            <td>opacity: 0.5;</td>
+        </tr>
+
+        <tr>
+            <td>transform</td>
+            <td>Yes</td>
+            <td>transform: rotate(45deg);</td>
+        </tr>
+
+        <tr>
+            <td>display</td>
+            <td>No</td>
+            <td>display: block;</td>
+        </tr>
+
+    </table>
+
+    <h2>Example</h2>
+
+    <div class="code-box">
+        .box {
+            transition: width 1s;
+        }
+
+        .box:hover {
+            width: 300px;
+        }
+    </div>
+
+</div>
+
+</body>
+</html>
