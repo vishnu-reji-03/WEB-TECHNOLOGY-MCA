@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String and Math Functions</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f5f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d3557;
+        }
+
+        h2 {
+            color: #2455a4;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #cccccc;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px 0 12px;
+            width: 95%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px 5px 5px 0;
+            border: none;
+            border-radius: 5px;
+            background: #2455a4;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #163b78;
+        }
+
+        .result {
+            background: #eaf2ff;
+            padding: 12px;
+            margin-top: 12px;
+            border-radius: 5px;
+            overflow-wrap: anywhere;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>JavaScript String and Math Functions</h1>
+
+    <!-- STRING FUNCTIONS -->
+    <div class="section">
+        <h2>String Functions</h2>
+
+        <label>Enter a string:</label>
+        <input type="text" id="text" placeholder="Enter your text">
+
+        <label>Search word:</label>
+        <input type="text" id="word" placeholder="Enter word to search">
+
+        <label>Replacement word:</label>
+        <input type="text" id="replacement" placeholder="Enter replacement">
+
+        <label>Start index:</label>
+        <input type="number" id="start" value="0">
+
+        <label>End index:</label>
+        <input type="number" id="end" value="5">
+
+        <br>
+
+        <button onclick="stringLength()">Length</button>
+        <button onclick="firstOccurrence()">First Occurrence</button>
+        <button onclick="lastOccurrence()">Last Occurrence</button>
+        <button onclick="searchWord()">Search Word</button>
+        <button onclick="sliceText()">Slice</button>
+        <button onclick="substringText()">Substring</button>
+        <button onclick="substrText()">Substr</button>
+        <button onclick="replaceWord()">Replace</button>
+        <button onclick="upperCase()">Uppercase</button>
+        <button onclick="lowerCase()">Lowercase</button>
+
+        <div class="result" id="stringResult">
+            String results will appear here.
+        </div>
+    </div>
+
+    <!-- MATH FUNCTIONS -->
+    <div class="section">
+        <h2>Math Functions</h2>
+
+        <label>Enter number A:</label>
+        <input type="number" id="num1" value="16">
+
+        <label>Enter number B:</label>
+        <input type="number" id="num2" value="3">
+
+        <button onclick="power()">Power (A to B)</button>
+        <button onclick="squareRoot()">Square Root of A</button>
+        <button onclick="roundValue()">Round A</button>
+        <button onclick="ceilValue()">Ceiling of A</button>
+        <button onclick="floorValue()">Floor of A</button>
+        <button onclick="absoluteValue()">Absolute Value of A</button>
+        <button onclick="sineValue()">Sine of A (degrees)</button>
+        <button onclick="cosineValue()">Cosine of A (degrees)</button>
+        <button onclick="minimumValue()">Minimum</button>
+        <button onclick="maximumValue()">Maximum</button>
+        <button onclick="randomValue()">Random Number</button>
+
+        <div class="result" id="mathResult">
+            Math results will appear here.
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Get string input
+    function getText() {
+        return document.getElementById("text").value;
+    }
+
+    function getWord() {
+        return document.getElementById("word").value;
+    }
+
+    function showString(result) {
+        document.getElementById("stringResult").textContent =
+            result;
+    }
+
+    // STRING FUNCTIONS
+
+    function stringLength() {
+        showString("Length: " + getText().length);
+    }
+
+    function firstOccurrence() {
+        let text = getText();
+        let word = getWord();
+
+        showString("First occurrence index: " +
+            (word ? text.indexOf(word) : "Enter a search word"));
+    }
+
+    function lastOccurrence() {
+        let text = getText();
+        let word = getWord();
+
+        showString("Last occurrence index: " +
+            (word ? text.lastIndexOf(word) : "Enter a search word"));
+    }
+
+    function searchWord() {
+        let text = getText();
+        let word = getWord();
+
+        if (!word) {
+            showString("Please enter a search word.");
+        } else {
+            showString("Search result: " +
+                (text.includes(word) ? "Word found" : "Word not found"));
+        }
+    }
+
+    function sliceText() {
+        let text = getText();
+        let start = Number(document.getElementById("start").value);
+        let end = Number(document.getElementById("end").value);
+
+        showString("Slice result: " + text.slice(start, end));
+    }
+
+    function substringText() {
+        let text = getText();
+        let start = Number(document.getElementById("start").value);
+        let end = Number(document.getElementById("end").value);
+
+        showString("Substring result: " +
+            text.substring(start, end));
+    }
+
+    function substrText() {
+        let text = getText();
+        let start = Number(document.getElementById("start").value);
+        let end = Number(document.getElementById("end").value);
+
+        showString("Substr result: " + text.substr(start, end));
+    }
+
+    function replaceWord() {
+        let text = getText();
+        let word = getWord();
+        let replacement = document.getElementById("replacement").value;
+
+        if (!word) {
+            showString("Please enter a word to replace.");
+        } else {
+            showString("Replace result: " +
+                text.replace(word, replacement));
+        }
+    }
+
+    function upperCase() {
+        showString("Uppercase: " + getText().toUpperCase());
+    }
+
+    function lowerCase() {
+        showString("Lowercase: " + getText().toLowerCase());
+    }
+
+    // GET NUMBERS
+    function getA() {
+        return Number(document.getElementById("num1").value);
+    }
+
+    function getB() {
+        return Number(document.getElementById("num2").value);
+    }
+
+    function showMath(result) {
+        document.getElementById("mathResult").textContent =
+            result;
+    }
+
+    // MATH FUNCTIONS
+
+    function power() {
+        showMath("Power: " + Math.pow(getA(), getB()));
+    }
+
+    function squareRoot() {
+        let a = getA();
+
+        showMath("Square root: " +
+            (a < 0 ? "Not a real number" : Math.sqrt(a)));
+    }
+
+    function roundValue() {
+        showMath("Round: " + Math.round(getA()));
+    }
+
+    function ceilValue() {
+        showMath("Ceiling: " + Math.ceil(getA()));
+    }
+
+    function floorValue() {
+        showMath("Floor: " + Math.floor(getA()));
+    }
+
+    function absoluteValue() {
+        showMath("Absolute value: " + Math.abs(getA()));
+    }
+
+    function sineValue() {
+        let radians = getA() * Math.PI / 180;
+        showMath("Sine: " + Math.sin(radians));
+    }
+
+    function cosineValue() {
+        let radians = getA() * Math.PI / 180;
+        showMath("Cosine: " + Math.cos(radians));
+    }
+
+    function minimumValue() {
+        showMath("Minimum: " + Math.min(getA(), getB()));
+    }
+
+    function maximumValue() {
+        showMath("Maximum: " + Math.max(getA(), getB()));
+    }
+
+    function randomValue() {
+        showMath("Random number (0 to 1): " + Math.random());
+    }
+</script>
+
+</body>
+</html>
