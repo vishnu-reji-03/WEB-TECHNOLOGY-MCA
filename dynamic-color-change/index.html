@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Color Changer</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            text-align: center;
+            padding-top: 200px;
+            transition: background-color 0.5s;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Background Color Changer</h1>
+
+    <button id="changeBtn">Change Background</button>
+
+    <script>
+        let button = document.getElementById("changeBtn");
+
+        button.addEventListener("click", function() {
+
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+
+            let color = "rgb(" + r + ", " + g + ", " + b + ")";
+
+            document.body.style.backgroundColor = color;
+
+        });
+    </script>
+
+</body>
+</html>
