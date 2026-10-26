@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Events</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 50px;
+        }
+
+        #content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: opacity 0.3s ease;
+        }
+
+        h2 {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content">
+        <h2 id="heading">Welcome! Move your mouse over the image.</h2>
+
+        <img id="myImage"
+             src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=300&h=200&fit=crop"
+             alt="Original Landscape">
+    </div>
+
+    <script>
+        const content = document.getElementById("content");
+        const image = document.getElementById("myImage");
+        const heading = document.getElementById("heading");
+
+        // Real image URLs
+        const originalImageSrc = "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=300&h=200&fit=crop";
+        const hoverImageSrc = "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=300&h=200&fit=crop";
+
+        // Mouseover event
+        content.addEventListener("mouseover", function() {
+            image.src = hoverImageSrc;
+            image.alt = "Forest Mist Landscape";
+            heading.textContent = "You moved the mouse over the image!";
+        });
+
+        // Mouseout event
+        content.addEventListener("mouseout", function() {
+            image.src = originalImageSrc;
+            image.alt = "Original Landscape";
+            heading.textContent = "Welcome! Move your mouse over the image.";
+        });
+    </script>
+
+</body>
+</html>
